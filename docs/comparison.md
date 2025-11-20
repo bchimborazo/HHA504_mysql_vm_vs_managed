@@ -9,7 +9,7 @@ The self-managed VM approach required more hands-on configuration. The process i
 In contrast, Cloud SQL provisioning was faster and more straightforward. Creating the instance, adding authorized networks, and setting up database users took approximately 6-7 minutes total. There were no configuration files to edit manually, no services to restart, and no troubleshooting required. 
 
 ### Preference
-Overall, I would personally go with a managed service. While more costly, I believe that it's extensive configurations and user friendly interface make it ideal in production. 
+Overall, I would personally go with a managed service. While more costly, I believe that it's extensive configurations and user friendly interface makes it ideal in production. 
 
 ## Use Case Analysis
 
@@ -21,7 +21,7 @@ For a student application, a self-managed would be the better option. A self man
 ### Departmental Analytics Database
 **Recommendation: Cloud SQL**
 
-A departmental analytics database would go best with Cloud SQL's automated backups, point-in-time recovery, and built-in monitoring capabilities. For departments without dedicated database administrators, the managed service eliminates the burden of security patches, version updates, and maintenance windows. The ability to easily scale resources and add read replicas for read-heavy analytical workloads makes Cloud SQL ideal for this use case.
+A departmental analytics database would go best with Cloud SQL's automated backups, point-in-time recovery, and built-in monitoring capabilities. For departments without dedicated database administrators, the managed service eliminates the burden of security patches, version updates, and maintenance windows. 
 
 ### HIPAA-Aligned Workload
 **Recommendation: Cloud SQL (with BAA)**

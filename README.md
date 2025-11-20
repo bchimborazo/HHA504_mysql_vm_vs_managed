@@ -34,7 +34,7 @@ HHA504_mysql_vm_vs_managed/
 └── screenshots/
     ├── vm/                       # VM-related screenshots
     ├── managed/                  # Cloud SQL screenshots
-    └── python/                   # Script execution screenshots
+
 ```
 
 
@@ -68,22 +68,11 @@ HHA504_mysql_vm_vs_managed/
 ## Connection String Patterns
 
 ### Self-Managed VM
-```python
-connection_string = "mysql+pymysql://USERNAME:PASSWORD@VM_EXTERNAL_IP:3306/DATABASE_NAME"
-```
-Example (no real credentials):
-```python
-connection_string = "mysql+pymysql://dba:****@34.42.214.94:3306/test_db"
-```
+- server_url = f"mysql+pymysql://{VM_DB_USER}:{VM_DB_PASS}@{VM_DB_HOST}:{VM_DB_PORT}/"
 
 ### Managed Cloud SQL
-```python
-connection_string = "mysql+pymysql://USERNAME:PASSWORD@CLOUDSQL_PUBLIC_IP:3306/DATABASE_NAME"
-```
-Example (no real credentials):
-```python
-connection_string = "mysql+pymysql://dba:****@35.123.45.67:3306/test_db"
-```
+- server_url = f"mysql+pymysql://{MAN_DB_USER}:{MAN_DB_PASS}@{MAN_DB_HOST}:{MAN_DB_PORT}/"
+- mysql+pymysql://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME
 
 ## Secrets Management
 - All sensitive credentials are stored locally in a `.env` file that is NOT committed to GitHub. A `.env.example` file with placeholder values is provided in the repository for reference.
@@ -109,7 +98,7 @@ connection_string = "mysql+pymysql://dba:****@35.123.45.67:3306/test_db"
 ![MySQLConfigChanges](screenshots/vm/VM9.png)
 ![MySQScript](screenshots/vm/VM10.png)
 
-#### 4. Database & Table Verification
+#### 4. Successful Database & Table Verification
 ![ShowDatabases](screenshots/vm/VM11.png)
 
 
@@ -123,7 +112,7 @@ connection_string = "mysql+pymysql://dba:****@35.123.45.67:3306/test_db"
 #### 2. Adding User
 ![User](screenshots/managed/managed4.png)
 
-#### 4. Connection, Database & Table Verification
+#### 4. Connection, Successful Database & Table Verification
 ![Final1](screenshots/managed/managed5.png)
 ![Final2](screenshots/managed/managed6.png)
 ![Final3](screenshots/managed/managedlast.png)
